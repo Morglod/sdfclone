@@ -101,25 +101,25 @@ new benchmark.Suite()
         deopt += r.x + r.y.c.bb;
     })
 
-    .add("fast deep cloner", function () {
+    .add("sdfclone", function () {
         const o = createObject();
         const r = cloner(o);
         deopt += r.x + r.y.c.bb;
     })
 
-    .add("fast deep cloner detect cycles", function () {
+    .add("sdfclone detect cycles", function () {
         const o = createObject();
         const r = clonerCycles(o);
         deopt += r.x + r.y.c.bb;
     })
 
-    .add("fast deep cloner with create", function () {
+    .add("sdfclone with create", function () {
         const o = createObject();
         const r = createCloner(clonerSchema)(o);
         deopt += r.x + r.y.c.bb;
     })
 
-    .add("fast deep cloner with schema get and create", function () {
+    .add("sdfclone with schema get and create", function () {
         const o = createObject();
         const r = createCloner(createCloneSchemaFrom(o))(o);
         deopt += r.x + r.y.c.bb;
