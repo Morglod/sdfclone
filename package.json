@@ -6,19 +6,26 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Morglod/use-partial-context.git"
+    "url": "git+https://github.com/Morglod/sdfclone.git"
   },
   "bugs": {
-    "url": "https://github.com/Morglod/use-partial-context/issues"
+    "url": "https://github.com/Morglod/sdfclone/issues"
   },
-  "homepage": "https://github.com/Morglod/use-partial-context#readme",
+  "homepage": "https://github.com/Morglod/sdfclone#readme",
   "keywords": [
-    "react",
-    "context",
-    "react-context",
-    "useContext",
-    "partial context",
-    "hooks",
+    "deep-clone",
+    "deepclone",
+    "deep-copy",
+    "deepcopy",
+    "fast",
+    "performance",
+    "performant",
+    "fastclone",
+    "fastcopy",
+    "fast-clone",
+    "fast-deep-clone",
+    "fast-copy",
+    "fast-deep-copy",
     "typescript"
   ],
   "author": "morglod",
@@ -34,7 +41,8 @@
   },
   "scripts": {
     "test": "tap test",
-    "build": "tsc"
+    "build": "tsc",
+    "bench": "bun run ./src/bench.ts"
   },
   "dependencies": {}
 }

@@ -30,9 +30,10 @@ const objectSchema = {
 };
 
 // create cloner
-const cloner = createCloner(objectSchema, {
-    detectCycles: false,
-});
+const cloner = createCloner(objectSchema);
+
+// or with cycle detector; detectCycles=false by default
+const cloner = createCloner(objectSchema, { detectCycles: true });
 
 // clone!
 const newObject = cloner(object);
@@ -101,3 +102,21 @@ Map | Set // this uses JSON.parse(JSON.stringify) technique by default
 
 Its also possible to pass custom cloner function with:  
 `new ClonerCustomFn(customCloner: x => x)`
+
+## Utils
+
+Create schema from existing object:
+
+```js
+const obj = { ... };
+
+// create schema
+const objSchema = createCloneSchemaFrom(obj);
+
+// with option that will also walk inside prototypes cloneProto=false by default
+const objSchemaWithProto = createCloneSchemaFrom(obj, { cloneProto: true });
+
+const cloner = createCloner(objSchema);
+
+const newObject = cloner(obj);
+```
