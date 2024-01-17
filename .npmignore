@@ -1,0 +1,7 @@
+.tap
+node_modules
+.DS_Store
+test
+src
+.gitignore
+bun.lockdb

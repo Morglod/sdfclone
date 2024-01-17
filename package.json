@@ -1,0 +1,40 @@
+{
+  "name": "sdfclone",
+  "version": "1.0.0",
+  "description": "World fastest deep clone based on schema",
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Morglod/use-partial-context.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Morglod/use-partial-context/issues"
+  },
+  "homepage": "https://github.com/Morglod/use-partial-context#readme",
+  "keywords": [
+    "react",
+    "context",
+    "react-context",
+    "useContext",
+    "partial context",
+    "hooks",
+    "typescript"
+  ],
+  "author": "morglod",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "benchmark": "2.1",
+    "fastest-json-copy": "^1.0.1",
+    "lodash": "^4.17.21",
+    "rfdc": "^1.3.0",
+    "tap": "^18.6.1",
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "test": "tap test",
+    "build": "tsc"
+  },
+  "dependencies": {}
+}
