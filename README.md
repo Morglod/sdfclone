@@ -5,6 +5,8 @@
 
 World fastest schema based deep clone for js (as for Jan 2024)
 
+Suited for immutable objects with defined structure.
+
 -   ⚡️ +-1% slower than optimal manually written code ⚡️
 -   12x faster than structuredClone
 -   no deps
@@ -41,6 +43,23 @@ const cloner = createCloner(objectSchema, { detectCycles: true });
 
 // clone!
 const newObject = cloner(object);
+```
+
+or less verbose variant:
+
+```js
+import { createCloner, createCloneSchemaFrom } from "sdfclone";
+
+let alreadyCreatedObject = { ... };
+
+// extract schema from object
+const objectSchema = createCloneSchemaFrom(alreadyCreatedObject);
+
+// create cloner
+const cloner = createCloner(objectSchema);
+
+// than clone!
+const newObject = cloner(alreadyCreatedObject);
 ```
 
 ## Benchmark
