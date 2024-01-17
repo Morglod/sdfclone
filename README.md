@@ -1,3 +1,6 @@
+[![NPM Version](https://badge.fury.io/js/sdfclone.svg?style=flat)](https://www.npmjs.com/package/sdfclone)
+[![Size](https://img.shields.io/bundlephobia/minzip/sdfclone)](https://gitHub.com/Morglod/sdfclone/)
+
 # sdfclone
 
 World fastest schema based deep clone for js (as for Jan 2024)
