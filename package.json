@@ -1,6 +1,6 @@
 {
   "name": "sdfclone",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "World fastest deep clone based on schema",
   "types": "lib/index.d.ts",
   "main": "lib/index.js",

@@ -26,6 +26,15 @@ function createClonerCodeCtx() {
     };
 }
 
+// browser support
+const BufferObject = eval(`(function() {
+    try {
+        return Buffer;
+    } catch {
+        return Symbol("no buffer");
+    }
+})`)();
+
 export function createClonerCode(
     schema: any,
     inputName: string,
@@ -53,7 +62,7 @@ export function createClonerCode(
     } else if (schema === undefined) {
         return `undefined`;
     } else if (
-        schema === Buffer ||
+        schema === BufferObject ||
         schema === Int8Array ||
         schema === Uint8Array ||
         schema === Uint8ClampedArray ||
@@ -248,7 +257,7 @@ export function createCloneSchemaFrom(
     if (x instanceof Float64Array) return Float64Array;
     if (x instanceof BigInt64Array) return BigInt64Array;
     if (x instanceof BigUint64Array) return BigUint64Array;
-    if (x instanceof Buffer) return Buffer;
+    if (x instanceof BufferObject) return BufferObject;
     if (x instanceof ArrayBuffer) return ArrayBuffer;
 
     // TODO: implement non naive
